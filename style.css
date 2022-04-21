@@ -1,0 +1,629 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* side icons of social media */
+
+.social-icons {
+    text-align: center;
+    padding-left: 2px;
+    position: fixed;
+    left: 0px;
+    top: 30vh;
+}
+
+.social-icons li {
+    z-index: 1;
+    position: relative;
+    list-style: none;
+    height: 45px;
+    line-height: 45px;
+    width: 45px;
+    margin: 15px 0;
+    border-radius: 50%;
+    background: #dde1e7;
+    cursor: pointer;
+    box-shadow:3px 3px 5px rgba(94, 104, 121, 0.288);
+}
+
+.social-icons span {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    /* padding-right: 10px; */
+}
+
+.social-icons li a {
+    line-height: 45px;
+    font-size: 27px;
+    color: #b6bbc5;
+}
+
+.social-icons li.shadow {
+    box-shadow: inset -3px -3px 7px #ffffff73,
+        inset 3px 3px 5px rgba(94, 104, 121, 0.288);
+}
+
+.social-icons li.shadow a {
+    font-size: 25px;
+}
+
+.social-icons li:nth-child(1).fill-color a {
+    color: #4267B2;
+}
+
+.social-icons li:nth-child(2).fill-color a {
+    color: #1DA1F2;
+}
+
+.social-icons li:nth-child(3).fill-color a {
+    color: #E1306C;
+}
+
+/* END of side icons of social media */
+
+
+
+nav{
+    position: fixed !important;
+    top: 0px;
+    transition: background-color 0.8s;
+    /*z-index because of Contact an agent box */
+    z-index: 1;
+}
+
+nav img {
+    /* logo */
+    width: 80px;
+    height: auto;
+    float: left;
+}
+
+/* apply this rule when scrolling */
+.scrolling-active, .opened-withClick {
+    z-index: 2;
+    background-color: #202D44;
+    transition: background-color .8s;
+    box-shadow: 0 5px 1rem rgba(0, 0, 0, .1);
+}
+
+
+
+.banner {
+    min-height: 100vh;
+    max-width: 100%;
+    background-image: url(assets/images/cover.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* to show only the navigation without cover image and other things */
+.navigationOnly{
+    height: 66px;
+}
+
+ul li a::after {
+    content: '';
+    display: block;
+    margin-top: 4px;
+    width: 0;
+    height: 2px;
+    background-color: #0EC6D5 !important;
+    transition: width 0.3s;
+}
+
+ul li a:hover::after {
+    width: 100%;
+}
+
+.banner-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 30vh;
+}
+
+
+
+
+
+
+/* START of search section */
+#search-bg{
+    z-index: 1;
+}
+
+@media screen and (max-width: 768px) {
+
+    #search-bg .btn-group{
+        display: none;
+    }
+
+    #search-bg button{
+        border-radius: 5px;
+    }
+
+}
+/* END of search section */
+
+
+
+
+/* START of contact section */
+.contact-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+    color: white;
+}
+
+.line {
+    width: 344px;
+    height: 5px;
+    background-color: #0EC6D5;
+    margin-top: 4.5px;
+    position: absolute;
+    left: 3px;
+    border-radius: 20px;
+}
+
+.contact-box {
+    position: relative;
+    height: 210px;
+    width: 350px;
+    padding-left: 30px;
+    background-color: rgba(0, 26, 46, .4);
+    border-radius: 10px;
+}
+
+.contact-box #title {
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 17px;
+}
+
+.contact-box p {
+    font-size: 13px;
+}
+
+.contact-box i {
+    margin-right: 5px;
+}
+
+.contact-box a {
+    color: #bdb5b5;
+    text-decoration: none;
+}
+
+.contact-box a:hover {
+    color: #fff;
+    cursor: pointer;
+    transition: all ease 0.3s;
+}
+
+.contact-box input {
+    border-radius: 5px;
+    position: absolute;
+    text-align: center;
+    width: 200px;
+    height: 36px;
+    bottom: -10px;
+    color: #0C204C;
+    font-weight: 700;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.contact-box input:hover {
+    background-color: #C7C7C7;
+}
+
+@media screen and (max-width: 576px) {
+    .line {
+        width: 294px;
+        height: 4px;
+    }
+    .contact-box {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .line {
+        width: 194px;
+        height: 4px;
+    }
+    .contact-box {
+        width: 200px;
+        padding-left: 10px;
+    }
+
+    .contact-box input{
+        width: 150px;
+    }
+
+    .contact-box #title{
+        font-size: 15px;
+        font-weight: 400;
+    }
+}
+/* END of contact section */
+
+
+
+
+
+/* START of cards section */
+.card-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn-cont{
+    display: flex;
+    justify-content: center;
+}
+
+.rows {
+    margin-top: 40px;
+    width: 72%;
+    font-family: sans-serif;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.cards {
+    display: flex;
+    user-select: none;
+    height: 400px;
+    width: 300px;
+    /* cards-overlay will position absoulute, relative to this parent */
+    position: relative;
+    margin: 10px 0 30px 30px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px 2px rgba(104, 94, 94, 0.486);
+    background-position: center;
+
+}
+
+/* .card1 {
+    background-image: url(assets/property-images/1.jpg);
+}
+
+.card2 {
+    background-image: url(assets/property-images/2.jpg);
+}
+
+.card3 {
+    background-image: url(assets/property-images/3.jpg);
+} */
+
+/* overlay */
+.card-overlay {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, .2);
+    color: #fff;
+    transition: background-color 0.25s;
+}
+
+.card-overlay:hover {
+    background-color: rgba(0, 0, 0, .4);
+}
+
+/* texts inside the card */
+.cards-text {
+    padding-left: 6px;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    top: 200px;
+    height: 200px;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, .8), transparent);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.cards-text #title {
+    /* absolute--> is relative to cards-overlay */
+    color: white;
+    position: absolute;
+    bottom: 96px;
+}
+
+.cards-text .subtitle {
+    font-size: 12px;
+    color: rgb(168, 162, 162);
+    position: absolute;
+    bottom: 70px;
+}
+
+.cards-text .line {
+    /* the line in the banner was position absolute but here
+    we don't need absolute, the default works just fine. */
+    position: absolute;
+    bottom: 70px;
+    background-color: rgb(85, 79, 79);
+    height: 1px;
+    width: 280px;
+    border-radius: 10px;
+    margin-left: 6px;
+}
+
+.cards-text #price {
+    position: absolute;
+    bottom: 26px;
+}
+
+.desc img {
+    width: 15px;
+    background-color: white;
+}
+
+.desc {
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 0px;
+}
+
+.desc p {
+    font-size: 12px !important;
+    margin-right: 12px;
+}
+
+.desc i {
+    color: #0EC6D5;
+    margin-right: 3px;
+    font-size: 16px;
+}
+
+@media(max-width: 936px) {
+    .cards {
+        flex-grow: 0.9;
+    }
+}
+
+@media(max-width: 470px) {
+    .rows{
+        width: 90%;
+    }
+
+    .cards-text #title{
+        font-size: 13px;
+    }
+
+    .cards-text .subtitle {
+        font-size: 10px;
+    }
+    
+    .cards-text #price {
+        font-size: 13px;
+    }
+
+    /* card description section */
+    .desc p {
+        font-size: 10px !important;
+    }
+    
+    .desc i {
+        font-size: 14px;
+    }
+}
+
+@media(max-width: 370px) {
+    .cards-text .line {
+        width: 150px;
+    }
+}
+
+/* END of cards section */
+
+
+
+
+
+/* START of footer section */
+.c-footer p {
+    /* padding-top: 10px; */
+    /* line-height: 26px; */
+    font-size: 13px;
+}
+
+.c-footer i {
+    margin-right: 5px;
+}
+
+.c-footer a {
+    color: #ABA0A0;
+    text-decoration: none;
+}
+
+.c-footer a:hover {
+    color: #fff;
+    cursor: pointer;
+    transition: all ease .2s;
+}
+
+.c-footer a:hover .fa {
+    background: #0EC6D5;
+    color: #1b1a1a;
+}
+
+footer {
+    position: relative;
+    bottom: 0px;
+    width: 100%;
+    background: rgb(44, 41, 41);
+}
+
+footer .footer,
+footer .bottom {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #d9d9d9;
+}
+
+footer a {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #d9d9d9;
+    text-decoration: none;
+}
+
+.content .p {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.footer-wrapper {
+    display: flex;
+}
+
+.footer-wrapper .footer {
+    padding: 10px 20px;
+    flex-basis: 50%;
+}
+
+.footer h2 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.footer .content {
+    margin: 20px 0 0 0;
+    position: relative;
+}
+
+.footer .content:before {
+    position: absolute;
+    content: '';
+    top: -10px;
+    height: 2px;
+    width: 100%;
+    background: rgb(44, 41, 41);
+}
+
+.footer .content:after {
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 15%;
+    background: #0EC6D5;
+    top: -10px;
+}
+
+.footer1 .content p {
+    text-align: justify;
+}
+
+.footer1 .content .social {
+    margin: 20px 0 0 0;
+}
+
+.footer1 .content .social a {
+    padding: 0 2px;
+}
+
+.footer1 .content .social a span {
+    height: 40px;
+    width: 40px;
+    background: #1b1a1a;
+    line-height: 40px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.footer1 .content .social a span:hover {
+    background: #0EC6D5;
+    color: #1b1a1a;
+}
+
+.footer3 .content .fa {
+    font-size: 1.4rem;
+    background: #1a1a1a;
+    height: 40px;
+    width: 40px;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 50%;
+    transition: 0.3s;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.footer3 .content .fa:hover {
+    background: #0EC6D5;
+    color: #1b1a1a;
+}
+
+.footer3 .content .text {
+    font-size: 1.0625rem;
+    font-weight: 500;
+    padding-left: 10px;
+}
+
+.footer3 .content .phone {
+    margin: 15px 0;
+}
+
+.bottom {
+    padding: 5px;
+    font-size: 0.9rem;
+    background: #201f1f;
+}
+
+.bottom span {
+    color: #ABA0A0;
+}
+
+.bottom a {
+    text-decoration: none;
+    color: white;
+}
+
+.bottom a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 900px) {
+    footer {
+        position: relative;
+        bottom: 0px;
+    }
+
+    .footer-wrapper {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .footer-wrapper .footer {
+        margin: 5px 0;
+    }
+}
+
+/* END of footer section */
+
+
+
