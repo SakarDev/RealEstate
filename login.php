@@ -1,6 +1,5 @@
 <?php
 $page = "login";
-require_once 'includes/header.php';
 
 if(isset($_SESSION['signupSuccess'])){
   if($_SESSION['signupSuccess'] == 1){
@@ -16,6 +15,10 @@ if(isset($_SESSION['signupSuccess'])){
 if(isset($_SESSION['isLoggedIn']) && $_SESSION['isLoggedIn']==1){
   header("location: index.php");
 }
+
+// it needs to be after the header("location: index.php"); otherwise it will not work because of the header only once the header is sent :)
+require_once 'includes/header.php';
+
 ?>
 
 <!doctype html>
