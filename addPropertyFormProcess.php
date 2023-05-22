@@ -1,9 +1,12 @@
 <?php
-require_once('includes/conn.php');
 session_start();
+require_once('includes/conn.php');
 
 $errors = [];
 $data = [];
+$town = null;
+
+
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_SESSION['user_id'])) {
     // property_title
@@ -39,10 +42,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_SESSION['user_id'])) {
     }
 
     // town (optional)
-    if (isset($_POST['town']) && !empty($_POST["city"])) {
+    if (isset($_POST['town']) && !empty($_POST["town"])) {
         $town = test_input($_POST["town"]);
-    }else{
-        $town = "";
     }
 
     // street
@@ -159,17 +160,17 @@ if (!empty($errors)) {
     $data["success"] = true;
     $data["message"] = "Success!";
 
-    // rename and store the image in the uploads folder 
-    $fileName = $_FILES['property_image']['name'];
-    $fileErr = $_FILES['property_image']['error'];
 
-    $fileExt = explode('.', $fileName);
+    // rename and store the image in the uploads folder 
+    $fileExt = explode('.', $_FILES['property_image']['name']);
     $fileActualExt = strtolower(end($fileExt));
     //allowed file types to be uploded
     $allowed = array('jpg', 'jpeg', 'png');
+    $errors['property_image'] = "It came here!";
+
 
     if (in_array($fileActualExt, $allowed)) {
-        if ($fileErr == 0) {
+        if ($_FILES['property_image']['error'] == 0) {
             //generating a new name using uniqid() function which generates a unique identifier based on the current time in microseconds
             $fileNameNew = uniqid('', true) . "." . $fileActualExt;
             $fileDestination = "uploads/" . $fileNameNew;
@@ -183,6 +184,8 @@ if (!empty($errors)) {
         $errors['property_image'] = "Only (png/jpg/jpeg) file types are allowed!";
     }
     // -------------Inserting data to the database-------------
+
+
 
     // town is optional
     if ($town != "") {
@@ -242,7 +245,7 @@ if (!empty($errors)) {
             description  ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 
         $stmt->bind_param(
-            "sisiiiiiiiiisis",
+            "sisiiiiiiiiisss",
             $property_title,
             $property_type,
             $transaction_type,
@@ -260,6 +263,7 @@ if (!empty($errors)) {
             $description
         );
     }
+
     $stmt->execute();
     $stmt->close();
     $conn->close();

@@ -77,6 +77,8 @@ if(isset($_GET['getAllData'])){
         $sql .= " AND street_id_propertyfk  =".$_POST['street'];
     }
 
+    $sql .= " ORDER BY property_id DESC ";
+
     $result = $conn->query($sql);
     if($result->num_rows > 0){
         while ($row = $result->fetch_assoc()) {
