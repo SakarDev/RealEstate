@@ -22,17 +22,20 @@ if(isset($_GET['property_id']) && !empty($_GET['property_id'])){
 <html>
 
 <head>
-    <title>Add property</title>
+    <title>Property</title>
+    <link rel="icon" id="favicon" href="assets/icons/logo.ico" />
+
     <style>
-        .cards{
+        .cards {
             margin: 0 !important;
             margin-bottom: 30px !important;
         }
 
-        #telephone-group a{
+        #telephone-group a {
             text-decoration: none;
         }
-        #telephone-group i{
+
+        #telephone-group i {
             margin: 0 5px;
         }
     </style>
@@ -48,10 +51,12 @@ if(isset($_GET['property_id']) && !empty($_GET['property_id'])){
 
 
     <div class="container p-5">
-        <form enctype="multipart/form-data" id="addProperty-form" action="addPropertyFormProcess.php" method="POST" class="row g-3 col-xl-8 col-lg-10 col-12  mx-auto border p-3">
+        <form enctype="multipart/form-data" id="addProperty-form" action="addPropertyFormProcess.php" method="POST"
+            class="row g-3 col-xl-8 col-lg-10 col-12  mx-auto border p-3">
 
             <!-- property image	 -->
-            <div id="property_image-group" class="cards col-12" <?php echo "style=background-image:url(".$row['property_image'].");"; ?>>
+            <div id="property_image-group" class="cards col-12"
+                <?php echo "style=background-image:url(".$row['property_image'].");"; ?>>
             </div>
             <br>
 
@@ -144,7 +149,7 @@ if(isset($_GET['property_id']) && !empty($_GET['property_id'])){
             <!-- property telephone -->
             <div id="telephone-group" class="col-md-6 form-group">
                 <label class="form-label"><b> Phone Number: </b>
-                    
+
                     <a href="tel:+<?php echo $row['property_telephone'];?>">
                         <i class="fa fa-phone"></i><?php echo $row['property_telephone']; ?></a>
                 </label>
