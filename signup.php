@@ -1,4 +1,5 @@
-<?php 
+<?php
+session_start();
 $page = "signup";
 require_once('includes/conn.php');
 

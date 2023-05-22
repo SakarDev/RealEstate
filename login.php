@@ -1,4 +1,5 @@
 <?php
+session_start();
 $page = "login";
 
 if(isset($_SESSION['signupSuccess'])){
