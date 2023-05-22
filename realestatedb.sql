@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 23, 2023 at 12:22 AM
+-- Generation Time: May 23, 2023 at 12:33 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -87,7 +87,6 @@ CREATE TABLE `property` (
 --
 
 INSERT INTO `property` (`property_id`, `property_title`, `property_type_id_propertyfk`, `transaction_type`, `city_id_propertyfk`, `town_id_propertyfk`, `street_id_propertyfk`, `user_id_propertyfk`, `area`, `price`, `no_bedrooms`, `no_bathrooms`, `no_garages`, `no_floors`, `property_image`, `property_telephone`, `description`, `time`) VALUES
-(44, 'Vel dolores ex minim', 40, 'rent', 9, NULL, NULL, 32, '57.0000', '63.00', 931, 4, 11, 269, 'uploads/646aa9006d7a00.98126511.jpg', '2147483647', 'Quaerat non esse non', '2023-05-21 23:28:00'),
 (45, 'Amet Nam maiores op', 40, 'rent', 6, NULL, 16, 32, '84.0000', '976.00', 148, 702, 639, 451, 'uploads/646aa912024d36.97725246.jpg', '2147483647', 'Sed voluptate ut ut', '2023-05-21 23:28:18'),
 (46, 'Consectetur nostrum', 41, 'sale', 6, NULL, 10, 32, '22.0000', '177.00', 223, 696, 913, 334, 'uploads/646aa91f237051.12670699.jpg', '2147483647', 'Dignissimos eu persp', '2023-05-21 23:28:31'),
 (47, 'Expedita aut eum ill', 40, 'rent', 9, NULL, 7, 36, '3.0000', '444.00', 24, 894, 203, 172, 'uploads/646aa95ee59e47.63741377.jpg', '2147483647', 'Earum exercitationem', '2023-05-21 23:29:34'),
