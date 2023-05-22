@@ -1,6 +1,9 @@
 # RealEstate
 Wonder Area real estate website for real estate management, offering both client interfaces and an administrative dashboard, streamlining transactions and overall property administration.
 
+## Technologies
+This website is created using an array of technologies including pure CSS, Bootstrap, AJAX, JavaScript (JS), PHP, and MySQL. DataTable is being used for the admin dashboard for efficient data visualization and manipulation.
+
 ## To set it up with XAMPP, follow the steps below:
 
 1- Place the RealEstate folder inside the 'htdocs' directory of your XAMPP installation. <br/>
