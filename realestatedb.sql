@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 22, 2023 at 06:17 AM
+-- Generation Time: May 23, 2023 at 12:22 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -77,7 +77,7 @@ CREATE TABLE `property` (
   `no_garages` int(5) NOT NULL,
   `no_floors` int(5) NOT NULL,
   `property_image` varchar(100) NOT NULL,
-  `property_telephone` int(11) NOT NULL,
+  `property_telephone` varchar(11) NOT NULL,
   `description` text NOT NULL,
   `time` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -87,19 +87,19 @@ CREATE TABLE `property` (
 --
 
 INSERT INTO `property` (`property_id`, `property_title`, `property_type_id_propertyfk`, `transaction_type`, `city_id_propertyfk`, `town_id_propertyfk`, `street_id_propertyfk`, `user_id_propertyfk`, `area`, `price`, `no_bedrooms`, `no_bathrooms`, `no_garages`, `no_floors`, `property_image`, `property_telephone`, `description`, `time`) VALUES
-(44, 'Vel dolores ex minim', 40, 'rent', 9, NULL, NULL, 32, '57.0000', '63.00', 931, 4, 11, 269, 'uploads/646aa9006d7a00.98126511.jpg', 2147483647, 'Quaerat non esse non', '2023-05-21 23:28:00'),
-(45, 'Amet Nam maiores op', 40, 'rent', 6, NULL, 16, 32, '84.0000', '976.00', 148, 702, 639, 451, 'uploads/646aa912024d36.97725246.jpg', 2147483647, 'Sed voluptate ut ut', '2023-05-21 23:28:18'),
-(46, 'Consectetur nostrum', 41, 'sale', 6, NULL, 10, 32, '22.0000', '177.00', 223, 696, 913, 334, 'uploads/646aa91f237051.12670699.jpg', 2147483647, 'Dignissimos eu persp', '2023-05-21 23:28:31'),
-(47, 'Expedita aut eum ill', 40, 'rent', 9, NULL, 7, 36, '3.0000', '444.00', 24, 894, 203, 172, 'uploads/646aa95ee59e47.63741377.jpg', 2147483647, 'Earum exercitationem', '2023-05-21 23:29:34'),
-(48, 'Et sit adipisicing', 41, 'rent', 10, NULL, 8, 36, '35.0000', '35.00', 441, 643, 474, 458, 'uploads/646aa97809a8c7.36099639.jpg', 2147483647, 'Doloremque ratione u', '2023-05-21 23:30:00'),
-(49, 'Vel quas nobis quos', 40, 'sale', 9, NULL, 7, 35, '17.0000', '224.00', 149, 545, 818, 472, 'uploads/646aaaf8275e71.17960514.jpg', 2147483647, 'Sapiente quam sunt a', '2023-05-21 23:36:24'),
-(50, 'Temporibus ea accusa', 40, 'rent', 14, 15, 24, 35, '32.0000', '324.00', 589, 259, 960, 349, 'uploads/646aab1dd95e42.08245023.jpg', 2147483647, 'Omnis voluptatem Do', '2023-05-21 23:37:01'),
-(51, 'Veritatis quia enim', 41, 'rent', 10, NULL, 8, 42, '83.0000', '221.00', 708, 984, 445, 377, 'uploads/646aab41caca63.10190346.jpg', 2147483647, 'Rerum reprehenderit', '2023-05-21 23:37:37'),
-(52, 'Perspiciatis evenie', 40, 'rent', 6, NULL, 10, 42, '19.0000', '701.00', 20, 259, 306, 51, 'uploads/646aab51120153.98103067.jpg', 2147483647, 'Eu perspiciatis cor', '2023-05-21 23:37:53'),
-(53, 'Impedit repudiandae', 40, 'sale', 14, NULL, 25, 43, '19.0000', '955.00', 997, 25, 213, 805, 'uploads/646aab8a9f9134.41592241.jpg', 2147483647, 'Nesciunt illum sim', '2023-05-21 23:38:50'),
-(54, 'Maxime officia dolor', 40, 'sale', 6, NULL, 16, 43, '40.0000', '519.00', 777, 240, 765, 895, 'uploads/646aab96bd0ef2.75582530.jpg', 2147483647, 'Itaque minima adipis', '2023-05-21 23:39:02'),
-(55, 'Ducimus aliquid eve', 41, 'rent', 11, NULL, 27, 49, '38.0000', '143.00', 246, 179, 835, 621, 'uploads/646aabf7af6aa2.14100153.jpg', 2147483647, 'Molestiae accusamus', '2023-05-21 23:40:39'),
-(56, 'Sint facilis unde ut', 41, 'sale', 14, NULL, 23, 49, '21.0000', '405.00', 998, 818, 378, 158, 'uploads/646aac013acce1.98148690.jpg', 2147483647, 'Eius amet iusto sun', '2023-05-21 23:40:49');
+(44, 'Vel dolores ex minim', 40, 'rent', 9, NULL, NULL, 32, '57.0000', '63.00', 931, 4, 11, 269, 'uploads/646aa9006d7a00.98126511.jpg', '2147483647', 'Quaerat non esse non', '2023-05-21 23:28:00'),
+(45, 'Amet Nam maiores op', 40, 'rent', 6, NULL, 16, 32, '84.0000', '976.00', 148, 702, 639, 451, 'uploads/646aa912024d36.97725246.jpg', '2147483647', 'Sed voluptate ut ut', '2023-05-21 23:28:18'),
+(46, 'Consectetur nostrum', 41, 'sale', 6, NULL, 10, 32, '22.0000', '177.00', 223, 696, 913, 334, 'uploads/646aa91f237051.12670699.jpg', '2147483647', 'Dignissimos eu persp', '2023-05-21 23:28:31'),
+(47, 'Expedita aut eum ill', 40, 'rent', 9, NULL, 7, 36, '3.0000', '444.00', 24, 894, 203, 172, 'uploads/646aa95ee59e47.63741377.jpg', '2147483647', 'Earum exercitationem', '2023-05-21 23:29:34'),
+(48, 'Et sit adipisicing', 41, 'rent', 10, NULL, 8, 36, '35.0000', '35.00', 441, 643, 474, 458, 'uploads/646aa97809a8c7.36099639.jpg', '2147483647', 'Doloremque ratione u', '2023-05-21 23:30:00'),
+(49, 'Vel quas nobis quos', 40, 'sale', 9, NULL, 7, 35, '17.0000', '224.00', 149, 545, 818, 472, 'uploads/646aaaf8275e71.17960514.jpg', '2147483647', 'Sapiente quam sunt a', '2023-05-21 23:36:24'),
+(50, 'Temporibus ea accusa', 40, 'rent', 14, 15, 24, 35, '32.0000', '324.00', 589, 259, 960, 349, 'uploads/646aab1dd95e42.08245023.jpg', '2147483647', 'Omnis voluptatem Do', '2023-05-21 23:37:01'),
+(51, 'Veritatis quia enim', 41, 'rent', 10, NULL, 8, 42, '83.0000', '221.00', 708, 984, 445, 377, 'uploads/646aab41caca63.10190346.jpg', '2147483647', 'Rerum reprehenderit', '2023-05-21 23:37:37'),
+(52, 'Perspiciatis evenie', 40, 'rent', 6, NULL, 10, 42, '19.0000', '701.00', 20, 259, 306, 51, 'uploads/646aab51120153.98103067.jpg', '2147483647', 'Eu perspiciatis cor', '2023-05-21 23:37:53'),
+(53, 'Impedit repudiandae', 40, 'sale', 14, NULL, 25, 43, '19.0000', '955.00', 997, 25, 213, 805, 'uploads/646aab8a9f9134.41592241.jpg', '2147483647', 'Nesciunt illum sim', '2023-05-21 23:38:50'),
+(54, 'Maxime officia dolor', 40, 'sale', 6, NULL, 16, 43, '40.0000', '519.00', 777, 240, 765, 895, 'uploads/646aab96bd0ef2.75582530.jpg', '2147483647', 'Itaque minima adipis', '2023-05-21 23:39:02'),
+(55, 'Ducimus aliquid eve', 41, 'rent', 11, NULL, 27, 49, '38.0000', '143.00', 246, 179, 835, 621, 'uploads/646aabf7af6aa2.14100153.jpg', '2147483647', 'Molestiae accusamus', '2023-05-21 23:40:39'),
+(56, 'Sint facilis unde ut', 41, 'sale', 14, NULL, 23, 49, '21.0000', '405.00', 998, 818, 378, 158, 'uploads/646aac013acce1.98148690.jpg', '2147483647', 'Eius amet iusto sun', '2023-05-21 23:40:49');
 
 -- --------------------------------------------------------
 
@@ -292,7 +292,7 @@ ALTER TABLE `loginlogs`
 -- AUTO_INCREMENT for table `property`
 --
 ALTER TABLE `property`
-  MODIFY `property_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
+  MODIFY `property_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
 
 --
 -- AUTO_INCREMENT for table `property_type`
