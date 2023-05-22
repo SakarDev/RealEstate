@@ -1,4 +1,6 @@
-<?php $page = "user"; ?>
+<?php
+session_start();
+$page = "user"; ?>
 <!DOCTYPE html>
 <html lang="en">
 

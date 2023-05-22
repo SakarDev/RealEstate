@@ -1,7 +1,6 @@
-<?php 
-session_start();
-require_once("conn.php"); ?>
-<?php require_once("redirectToLogin.php") ?>
+<?php
+require_once("conn.php");
+require_once("redirectToLogin.php") ?>
 
 <link rel="stylesheet" href="../css/main.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">

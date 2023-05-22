@@ -1,4 +1,6 @@
-<?php $page = "post"; ?>
+<?php
+session_start();
+$page = "post"; ?>
 
 <!DOCTYPE html>
 <html lang="en">

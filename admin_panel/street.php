@@ -1,4 +1,5 @@
 <?php
+session_start();
 $page = "street";
 require_once("includes/conn.php");
 // Fetch all the city data for the dropdowns 

@@ -1,4 +1,6 @@
-<?php $page = "propertyType"; ?>
+<?php
+session_start();
+$page = "propertyType"; ?>
 <!DOCTYPE html>
 <html lang="en">
 

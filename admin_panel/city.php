@@ -1,4 +1,6 @@
-<?php $page = "city"; ?>
+<?php
+session_start();
+$page = "city"; ?>
 <!DOCTYPE html>
 <html lang="en">
 

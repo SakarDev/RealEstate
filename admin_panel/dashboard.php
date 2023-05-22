@@ -1,4 +1,6 @@
-<?php $page = "dashboard"; ?>
+<?php
+session_start();
+$page = "dashboard"; ?>
 <!doctype html>
 <html lang="en">
 
