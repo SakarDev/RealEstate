@@ -13,8 +13,11 @@ Password: Pa$$w0rd! <br/>
 ## Technologies
 This website is created using an array of technologies including pure CSS, some Bootstrap, AJAX, JavaScript (JS), PHP, and MySQL. DataTable is being used for the admin dashboard for efficient data visualization and manipulation.
 
-## To set it up with XAMPP, follow the steps below:
+## Here is the ER diagram:
+<img src="./realEstateDbSchema.png" alt="ER Diagram Design" />
+The table “loginlogs” is responsible of blocking the user IP address for 5 minutes after 3 failed login attempts in the admin login page.
 
+## To set it up with XAMPP, follow the steps below:
 1- Place the RealEstate folder inside the 'htdocs' directory of your XAMPP installation. <br/>
 2- Import the 'realestatedb.sql' database file into your phpMyAdmin. You can find this file in the root of the project folder. <br/>
 3- Navigate to the RealEstate/includes/ directory and locate the 'conn.php' file. This file establishes a connection with the MySQL database. Open this file and ensure the database username and password are correctly       configured to match your database credentials. <br/>
@@ -43,5 +46,4 @@ Password: Pa$$w0rd! <br/>
 #### Regular User:
 Email: sakarUser@gmail.com <br/>
 Password: Pa$$w0rd! <br/>
-
 All other accounts that are created utilize the same password: Pa$$w0rd!
