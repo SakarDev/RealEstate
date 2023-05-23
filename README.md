@@ -45,3 +45,6 @@ Email: sakarUser@gmail.com <br/>
 Password: Pa$$w0rd! <br/>
 
 All other accounts that are created utilize the same password: Pa$$w0rd!
+
+## Here is the ER diagram:
+[ER Diagrma design](./realEstateDbSchema.png)
