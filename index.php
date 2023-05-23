@@ -60,7 +60,7 @@ $city_result = $conn->query($city_query);
         </nav>
 
         <div class="banner-text">
-            <h1 class="h1 text-white">A home changes everything</h1>
+            <h1 class="h1 text-white text-center">A home changes everything</h1>
         </div>
 
         <!-- search section  -->
@@ -159,9 +159,10 @@ $city_result = $conn->query($city_query);
     </div>
 
 
-    <div class="social-icons">
-        <li><a href="https://www.facebook.com/sakar.h.saeed/"><span><i class="fa fa-facebook-f"></i></span></a></li>
+    <div class="social-icons" id="social-icons-disappear">
+        <li><a href="https://github.com/SakarDev/"><span><i class="fa fa-github"></i></span></a></li>
         <li><a href="https://twitter.com/Sakar_Hamasaeed"><span><i class="fa fa-twitter"></i></span></a></li>
+        <li><a href="https://www.facebook.com/sakar.h.saeed/"><span><i class="fa fa-facebook-f"></i></span></a></li>
         <li><a href="https://www.instagram.com/sakar.hamasaeed/"><span><i class="fa fa-instagram"></i></span></a></li>
     </div>
 

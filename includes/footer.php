@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
 
-<footer>
+    <footer>
         <div class="footer-wrapper">
             <div class="footer1 footer">
                 <h2>About us</h2>
                 <div class="content">
                     <p>
-                    Wonder Area is the official website in Kurdistan and hosts listings for homes, 
-                    villas apartments, and rentala. Our website gathers its information from whoever publishes  
-                    their property.</p>
+                        Wonder Area is the official website in Kurdistan and hosts listings for homes,
+                        villas apartments, and rentala. Our website gathers its information from whoever publishes
+                        their property.</p>
                     <div class="social">
-                        <a href="https://www.facebook.com/sakar.h.saeed/"><span class="fa fa-facebook"></span></a>
+                        <a href="https://github.com/SakarDev/"><span class="fa fa-github"></span></a>
                         <a href="https://twitter.com/Sakar_Hamasaeed"><span class="fa fa-twitter"></span></a>
+                        <a href="https://www.facebook.com/sakar.h.saeed/"><span class="fa fa-facebook"></span></a>
                         <a href="https://www.instagram.com/sakar.hamasaeed/"><span class="fa fa-instagram"></span></a>
                     </div>
                 </div>
@@ -64,7 +67,7 @@
 
         <div class="bottom">
             <style>
-                .credit a:hover{
+                .credit a:hover {
                     color: #0EC6D5;
                 }
             </style>
@@ -78,6 +81,7 @@
         </div>
 
     </footer>
-    
+
 </body>
+
 </html>
