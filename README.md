@@ -15,6 +15,7 @@ This website is created using an array of technologies including pure CSS, some 
 
 ## Here is the ER diagram:
 <img src="./realEstateDbSchema.png" alt="ER Diagram Design" />
+The table “loginlogs” is responsible of blocking the user IP address for 5 minutes after 3 failed login attempts in the admin login page.
 
 ## To set it up with XAMPP, follow the steps below:
 1- Place the RealEstate folder inside the 'htdocs' directory of your XAMPP installation. <br/>
