@@ -1,8 +1,17 @@
 # RealEstate
 Wonder Area real estate website for real estate management, offering both client interfaces and an administrative dashboard, streamlining transactions and overall property administration.
 
+## To access the RealEstate website and its admin panel:
+### Client Interface:
+The client interface of the RealEstate website is hosted at https://wonderarea-realestate.000webhostapp.com/.  <br/>
+### Admin Panel Dashboard:
+The admin panel dashboard of the RealEstate website is also hosted at https://wonderarea-realestate.000webhostapp.com/admin_panel/loginAd.php. <br/>
+To log in as an admin, please use the following credentials: <br/>
+Email: sakarAdmin@gmail.com <br/>
+Password: Pa$$w0rd! <br/>
+
 ## Technologies
-This website is created using an array of technologies including pure CSS, Bootstrap, AJAX, JavaScript (JS), PHP, and MySQL. DataTable is being used for the admin dashboard for efficient data visualization and manipulation.
+This website is created using an array of technologies including pure CSS, some Bootstrap, AJAX, JavaScript (JS), PHP, and MySQL. DataTable is being used for the admin dashboard for efficient data visualization and manipulation.
 
 ## To set it up with XAMPP, follow the steps below:
 
