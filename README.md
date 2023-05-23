@@ -32,8 +32,8 @@ Email: sakarUser@gmail.com <br/>
 Password: Pa$$w0rd!  <br/>
 
 ### Additional Notes:
-Creation of new admin accounts can only be done by existing admins. Once logged in as admin, select 'Register admin' from the profile dropdown on the upper right side of the admin panel.
-Be aware that there's a limit of 3 failed login attempts every 5 minutes for admin users. If you exceed this limit, your IP will be blocked for 5 minutes.
+1- Creation of new admin accounts can only be done by existing admins. Once logged in as admin, select 'Register admin' from the profile dropdown on the upper right side of the admin panel. <br/>
+2- Be aware that there's a limit of 3 failed login attempts every 5 minutes for admin users. If you exceed this limit, your IP will be blocked for 5 minutes.
 
 ### Log in detail examples:
 #### Admin:
